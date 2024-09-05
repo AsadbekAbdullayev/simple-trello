@@ -3,13 +3,11 @@ export const defaultFontFamily = `
     font-family: 'Roboto';
     font-size: 12px;
 `;
-
 export const headerFontFamily = `
     font-family: 'Roboto';
     font-size: 18px;
     font-weight: 600;
 `;
-
 export const bgColor = '#0179bf';
 export const listBGColor = '#ebecf0';
 export const textColor = '#000';
