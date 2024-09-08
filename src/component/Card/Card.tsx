@@ -6,7 +6,6 @@ import { useDrag, useDrop } from 'react-dnd';
 import reduxConnect from '../../store/reduxConnect';
 import { switchCardItems, apiInProgress } from '../../actions';
 import { updateSwitchUserBoardListCards } from '../../helpers/apiService';
-
 const CardItem = styled.div`
     background-color: #fff;
     border-radius: 3px;
@@ -29,7 +28,6 @@ const CardModalContainer = styled.div`
     background-color: rgba(0, 0, 0, 0.5);
     z-index: 1;
 `;
-
 const CardModalContent = styled.div`
     width: 380px;
     min-height: 200px;
@@ -43,14 +41,12 @@ const CardModalContent = styled.div`
         margin: calc(50vh - 150px) auto;
     }
 `;
-
 const CardModalHeader = styled.div`
     display: flex;
     flex-direction: row;
     padding: 10px 0;
     align-items: center;
 `;
-
 const CardTitle = styled.div`
     flex: 1;
     font-size: 20px;
