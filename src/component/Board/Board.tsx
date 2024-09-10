@@ -17,7 +17,6 @@ const BoardHeader = styled.div`
   color: #fff;
   ${({ theme }) => theme.headerFontFamily}
 `;
-
 const BoardListContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
