@@ -59,5 +59,4 @@ function mapStateToProps(state: any) {
     boardLists: state.lists[boardDetail.boardId] || [],
   };
 }
-
 export default reduxConnect(Board, null, mapStateToProps);
