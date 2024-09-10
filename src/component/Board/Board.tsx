@@ -52,7 +52,6 @@ const Board: React.FC = ({ boardDetail, boardLists }: any) => {
     </BoardContainer>
   );
 };
-
 function mapStateToProps(state: any) {
   const boardDetail = state.boards[0];
   return {
