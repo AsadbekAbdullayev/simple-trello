@@ -10,7 +10,6 @@ const BoardContainer = styled.div`
   display: flex;
   flex-direction: column;
 `;
-
 const BoardHeader = styled.div`
   display: flex;
   padding: 10px 20px;
