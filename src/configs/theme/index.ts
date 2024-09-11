@@ -11,7 +11,6 @@ export const headerFontFamily = `
 export const bgColor = '#0179bf';
 export const listBGColor = '#ebecf0';
 export const textColor = '#000';
-
 export const buttonBorderColor = 'rgba(41, 41, 41, 0.35)';
 export const buttonColor = '#000';
 export const buttonBGColor = '#fff'
