@@ -66,15 +66,12 @@ export function getUserDetails(): Promise<any> {
 export function updateUserBoardWithList(boardId: string, list: IList): Promise<any> {
     return mockApiService(APIUrls.updateUserBoardList, 'POST', {}, {boardId, ...list});
 }
-
 export function updateUserBoardListWithCard(boardId: string, listId: string, card: ICard): Promise<any> {
     return mockApiService(APIUrls.updateUserBoardListWithCard, 'POST', {}, {boardId, listId, ...card});
 }
-
 export function updateSwitchUserBoardLists(boardId: string, sourceListId: string, destListId: string): Promise<any> {
     return mockApiService(APIUrls.updateSwitchUserBoardLists, 'PUT', {}, {boardId, sourceListId, destListId});
 }
-
 export function updateSwitchUserBoardListCards(boardId: string, listId: string, sourceCardId: string, destCardId: string): Promise<any> {
     return mockApiService(APIUrls.updateSwitchUserBoardListCards, 'PUT', {}, {boardId, listId, sourceCardId, destCardId});
 }
