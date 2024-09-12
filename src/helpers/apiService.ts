@@ -1,6 +1,5 @@
 import uuidv1 from 'uuid/v1';
 import { IUserDetail, IList, ICard } from '../reducers';
-
 const boardId = uuidv1();
 const listId = uuidv1();
 const cardId = uuidv1();
@@ -29,7 +28,6 @@ const userDetails: IUserDetail = {
         ]
     }
 }
-
 const APIUrls = {
     'getUserDetails': '/get-user-board',
     'updateUserBoardList': '/update-board-list',
@@ -37,8 +35,6 @@ const APIUrls = {
     'updateSwitchUserBoardLists': '/update-switch-user-board-lists',
     'updateSwitchUserBoardListCards': '/update-switch-user-board-list-cards',
 };
-
-
 export function apiService(url: string, method = 'GET', headers?: any, body?: any) {
     return fetch(url, { method, headers, body: JSON.stringify(body) })
         .then(
@@ -46,7 +42,6 @@ export function apiService(url: string, method = 'GET', headers?: any, body?: an
             (error: any) => ({ type: 'error', message: 'Something went wrong!' })
         );
 }
-
 // #region Mock Area
 /**
  * temporary mock API
