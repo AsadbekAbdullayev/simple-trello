@@ -53,15 +53,12 @@ const mockApis: any = {
     [APIUrls.updateSwitchUserBoardLists]: (request: any) => request,
     [APIUrls.updateSwitchUserBoardListCards]: (request: any) => request,
 };
-
 function mockApiService(url: string, method?: string, headers?: any, body?: any) {
     return new Promise((resolve) => {
         window.setTimeout(resolve, 1000, mockApis[url](body));
     });
 }
-
 // #endregion
-
 export function getUserDetails(): Promise<any> {
     return mockApiService(APIUrls.getUserDetails);
 }
