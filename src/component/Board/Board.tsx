@@ -32,7 +32,6 @@ const BoardListContainer = styled.div`
     max-height: calc(100vh - 70px);
   }
 `;
-
 const Board: React.FC = ({ boardDetail, boardLists }: any) => {
   return (
     <BoardContainer>
