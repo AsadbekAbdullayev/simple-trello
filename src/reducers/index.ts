@@ -10,7 +10,6 @@ export interface IList {
     listId: string,
     title: string
 };
-
 export interface ICard {
     cardId: string,
     title: string,
