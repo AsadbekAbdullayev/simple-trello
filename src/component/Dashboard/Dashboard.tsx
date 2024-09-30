@@ -6,9 +6,11 @@ import { IUserDetail, IInitialState } from '../../reducers';
 import { fetchUserDetails, apiInProgress } from '../../actions';
 import { Loader } from '../shared/Loader';
 import styled from 'styled-components';
+
 const PageContainer = styled.div`
     position: relative;
 `;
+
 const Dashboard: React.FC = ({ apiInProgress, isApiInProgress, fetchUserDetails }: any) => {
     const [initialDataLoaded, setInitialDataLoaded] = useState(false);
     useEffect(() => {
@@ -28,6 +30,7 @@ const Dashboard: React.FC = ({ apiInProgress, isApiInProgress, fetchUserDetails 
         </PageContainer>
     );
 };
+
 
 function mapStateToProps(state: IInitialState) {
     return {
