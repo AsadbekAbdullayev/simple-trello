@@ -3,6 +3,7 @@ import { IUserDetail, IList, ICard } from '../reducers';
 const boardId = uuidv1();
 const listId = uuidv1();
 const cardId = uuidv1();
+
 const userDetails: IUserDetail = {
     boards: [
         {
