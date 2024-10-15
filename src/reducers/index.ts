@@ -1,6 +1,5 @@
 import { FETCH_USER_DETAILS, API_IN_PROGRESS, ADD_CARD_TO_LIST, SWITCH_LISTS, SWITCH_CARDS } from './../actions/actionConstants';
 import { ADD_LIST_TO_BOARD } from "../actions/actionConstants";
-
 export interface IBoard {
     boardId: string,
     boardName: string
