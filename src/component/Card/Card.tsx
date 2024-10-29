@@ -6,7 +6,6 @@ import { useDrag, useDrop } from 'react-dnd';
 import reduxConnect from '../../store/reduxConnect';
 import { switchCardItems, apiInProgress } from '../../actions';
 import { updateSwitchUserBoardListCards } from '../../helpers/apiService';
-
 const CardItem = styled.div`
     background-color: #fff;
     border-radius: 3px;
