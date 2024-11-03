@@ -6,7 +6,6 @@ import styled from 'styled-components';
 import reduxConnect from '../../../store/reduxConnect';
 import { updateUserBoardListWithCard } from '../../../helpers/apiService';
 import uuidv1 from 'uuid/v1';
-
 const AddCardContainer = styled.div`
     background-color: #ffffff;
     border-radius: 3px;
