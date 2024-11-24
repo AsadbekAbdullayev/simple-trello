@@ -6,7 +6,6 @@ import styled from "styled-components";
 import AddList from "../List/AddList";
 import { DndProvider } from "react-dnd";
 import Backend from "react-dnd-html5-backend";
-
 const BoardContainer = styled.div`
   display: flex;
   flex-direction: column;
