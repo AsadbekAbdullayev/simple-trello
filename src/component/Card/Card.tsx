@@ -19,7 +19,6 @@ const CardItem = styled.div`
         background-color: #f4f5f7;
     }
 `;
-
 const CardModalContainer = styled.div`
     position: fixed;
     top: 0;
