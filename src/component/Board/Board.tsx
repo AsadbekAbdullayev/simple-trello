@@ -5,7 +5,9 @@ import { IList } from "../../reducers";
 import styled from "styled-components";
 import AddList from "../List/AddList";
 import { DndProvider } from "react-dnd";
-import Backend from "react-dnd-html5-backend";
+import { HTML5Backend } from "react-dnd-html5-backend"; // eski nom Backend emas, HTML5Backend
+
+// Styled Components
 const BoardContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -16,16 +18,16 @@ const BoardHeader = styled.div`
   padding: 10px 20px;
   background-color: #0266a2;
   color: #fff;
-  ${({ theme }) => theme.headerFontFamily}
+  ${({ theme }) => theme.headerFontFamily};
 `;
+
 const BoardListContainer = styled.div`
   display: flex;
   flex-flow: row nowrap;
   padding: 10px 0;
   overflow-x: auto;
-  overflow-y: hidden;
-  margin-right: 20px;
-  margin-left: 20px;
+  margin: 0 20px;
+
   @media only screen and (max-width: 600px) {
     flex-flow: column;
     overflow-x: hidden;
@@ -33,25 +35,36 @@ const BoardListContainer = styled.div`
     max-height: calc(100vh - 70px);
   }
 `;
-const Board: React.FC = ({ boardDetail, boardLists }: any) => {
+
+interface IBoardProps {
+  boardDetail: {
+    boardId: string;
+    boardName: string;
+  };
+  boardLists: IList[];
+}
+
+const Board: React.FC<IBoardProps> = ({ boardDetail, boardLists }) => {
   return (
     <BoardContainer>
       <BoardHeader>{boardDetail.boardName}</BoardHeader>
       <BoardListContainer>
-        <DndProvider backend={Backend}>
-          {boardLists.map((boardList: IList) => (
+        <DndProvider backend={HTML5Backend}>
+          {boardLists.map((boardList) => (
             <List
               key={boardList.listId}
               boardId={boardDetail.boardId}
               {...boardList}
             />
           ))}
+          <AddList boardId={boardDetail.boardId} />
         </DndProvider>
-        <AddList boardId={boardDetail.boardId} />
       </BoardListContainer>
     </BoardContainer>
   );
 };
+
+// Redux mapping
 function mapStateToProps(state: any) {
   const boardDetail = state.boards[0];
   return {
@@ -59,4 +72,5 @@ function mapStateToProps(state: any) {
     boardLists: state.lists[boardDetail.boardId] || [],
   };
 }
+
 export default reduxConnect(Board, null, mapStateToProps);
